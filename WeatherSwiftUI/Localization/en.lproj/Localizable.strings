@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  WeatherSwiftUI
+
+  Created by Alexandr Onischenko on 27.06.2022.
+  
+*/
+
+"text_hourly_forecast" = "Hourly forecast";
+
+"text_weekly_forecast" = "Weekly forecast";
+
+"search" = "Search";
+
+"moscow" = "Moscow";
+"kazan" = "Kazan";
+"saint petersburg" = "Saint Petersburg";
+"krasnodar" = "Krasnodar";
+"rostov-on-don" = "Rostov-on-Don";
+
+"nothing_found" = "Nothing found";

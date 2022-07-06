@@ -9,10 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            MainView(with: MainViewModel(city: City(
+                id: 0,
+                name: Localizable.moscow.localized,
+                coordinate: Coordinate(lat: 55.75, lon: 37.62))))
+        }
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
