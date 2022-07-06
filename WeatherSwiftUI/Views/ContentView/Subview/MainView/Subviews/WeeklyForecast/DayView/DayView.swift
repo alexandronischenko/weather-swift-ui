@@ -51,7 +51,7 @@ struct DayView: View {
 
 struct ItemByTheDay_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(item: DayViewModel(id: 0, date: "11.2022", dayTemp: 20, nightTemp: 10, dayCondition: "clear", nightCondition: "clear"))
+        DayView(item: DayViewModel(date: "11.2022", dayTemp: 20, nightTemp: 10, dayCondition: "clear", nightCondition: "clear"))
             .previewLayout(.sizeThatFits)
     }
 }

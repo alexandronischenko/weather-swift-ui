@@ -12,7 +12,7 @@ import SwiftSVG
 import Alamofire
 
 class HourViewModel: Identifiable, ObservableObject {
-    var id: Int
+    var id = UUID()
     var time: String
     var condition: Condition
     
@@ -39,8 +39,7 @@ class HourViewModel: Identifiable, ObservableObject {
         return formatter.string(from: measurement)
     }()
     
-    init(id: Int, time: String, temp: Int, condition: String) {
-        self.id = id
+    init(time: String, temp: Int, condition: String) {
         self.time = time
         self.temp = temp
         self.condition = Condition.castToCondition(iconName: condition.camelized)

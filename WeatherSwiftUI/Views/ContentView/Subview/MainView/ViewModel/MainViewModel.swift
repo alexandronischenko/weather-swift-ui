@@ -67,16 +67,14 @@ final class MainViewModel: ObservableObject {
         let hour = calendar.component(.hour, from: date)
         
         for i in hour..<weather.forecasts[0].hours.count {
-            let model = HourViewModel(id: i,
-                                      time: weather.forecasts[0].hours[i].hour,
+            let model = HourViewModel(time: weather.forecasts[0].hours[i].hour,
                                       temp: weather.forecasts[0].hours[i].temp,
                                       condition: weather.forecasts[0].hours[i].condition)
             self.itemsByTheHour.append(model)
         }
         
         for i in 0..<hour {
-            let model = HourViewModel(id: i + 24,
-                                      time: weather.forecasts[1].hours[i].hour,
+            let model = HourViewModel(time: weather.forecasts[1].hours[i].hour,
                                       temp: weather.forecasts[1].hours[i].temp,
                                       condition: weather.forecasts[1].hours[i].condition)
             self.itemsByTheHour.append(model)
@@ -84,7 +82,6 @@ final class MainViewModel: ObservableObject {
         
         for i in 0..<7 {
             let model = DayViewModel(
-                id: i,
                 date: weather.forecasts[i].date,
                 dayTemp:  weather.forecasts[i].parts.day.temp,
                 nightTemp: weather.forecasts[i].parts.night.temp,

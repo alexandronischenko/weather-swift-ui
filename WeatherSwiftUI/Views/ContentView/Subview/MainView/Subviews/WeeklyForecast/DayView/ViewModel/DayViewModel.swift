@@ -14,7 +14,7 @@ class DayViewModel: Identifiable, ObservableObject {
     
     var dayCondition: Condition
     var nightCondition: Condition
-    var id: Int
+    var id = UUID()
     
     lazy var formattedDate: String = {
         let dateFormatter = DateFormatter()
@@ -45,8 +45,7 @@ class DayViewModel: Identifiable, ObservableObject {
         return formatter.string(from: measurement)
     }()
     
-    init(id: Int, date: String, dayTemp: Int, nightTemp: Int, dayCondition: String, nightCondition: String) {
-        self.id = id
+    init(date: String, dayTemp: Int, nightTemp: Int, dayCondition: String, nightCondition: String) {
         self.date = date
         self.dayTemp = dayTemp
         self.nightTemp = nightTemp

@@ -24,7 +24,7 @@ struct HourView: View {
 
 struct ItemByTheHour_Previews: PreviewProvider {
     static var previews: some View {
-        HourView(item: HourViewModel(id: 0, time: "12:00", temp: 23, condition: "https://yastatic.net/weather/i/icons/funky/dark/ovc_ts.svg"))
+        HourView(item: HourViewModel(time: "12:00", temp: 23, condition: "https://yastatic.net/weather/i/icons/funky/dark/ovc_ts.svg"))
             .previewLayout(.sizeThatFits)
     }
 }

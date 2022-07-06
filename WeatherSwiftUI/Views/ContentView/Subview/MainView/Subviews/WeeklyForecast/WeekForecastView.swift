@@ -33,7 +33,7 @@ struct WeekForecastView: View {
 
 struct ListByTheDay_Previews: PreviewProvider {
     static var previews: some View {
-        WeekForecastView(items: [DayViewModel(id: 0, date: "11.01.2022", dayTemp: 15, nightTemp: 20, dayCondition: "clear", nightCondition: "clear")])
+        WeekForecastView(items: [DayViewModel(date: "11.01.2022", dayTemp: 15, nightTemp: 20, dayCondition: "clear", nightCondition: "clear")])
         .previewLayout(.sizeThatFits)
     }
 }
